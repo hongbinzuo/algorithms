@@ -23,6 +23,7 @@ public class Chapter1 {
 
     public static void main(String[] args){
         exercise111();
+        exercise112();
 
     }
 }
