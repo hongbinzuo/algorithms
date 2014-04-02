@@ -175,6 +175,31 @@ public class Chapter1 {
 
     }
 
+    public static long Nx(int N){
+       if (N==0) return 1;
+       if (N==1) return 1;
+       return N*Nx(N-1);
+    }
+
+    // it's a wrong implementation
+    public static double ln(double x){
+
+        ///10*10*10 = 1000
+        ///        ln(1000) =3
+
+        double result = 0.0;
+
+        while (( x /= 10) >=1){
+            result ++;
+        }
+
+        System.out.println("remainder is:"+ x);
+
+        //result += ;
+
+        return result;
+    }
+
     public static void main(String[] args){
         exercise111();
         exercise112();
@@ -193,6 +218,10 @@ public class Chapter1 {
         testHistogram();
 
         System.out.println("exR1(6)" + exR1(6));
+
+        System.out.println(ln((double)Nx(10)));
+
+        System.out.println(Math.log10(Nx(10)));
 
 
     }
