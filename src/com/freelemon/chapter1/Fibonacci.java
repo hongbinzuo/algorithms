@@ -17,6 +17,12 @@ public class Fibonacci {
         length = len;
     }
 
+    /**
+     * new implementation of Fibonacci with array container
+     * @param N the size
+     * @return
+     */
+
     public static long fNew(int N){
         if (fArray == null) fArray = new long[length];
 
