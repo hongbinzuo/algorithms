@@ -98,6 +98,25 @@ public class Chapter1 {
         }
     }
 
+    // exercise 1.1.15
+    public static int[] histogram(int[] a, int M){
+        int[] b = new int[M];
+
+
+        for (int i = 0; i < b.length ; i++) {
+            int n = 0; // the counter
+            for (int j = 0; j < a.length ; j++) {
+                if ( i == a[j] )
+                    n++;
+            }
+
+            b[i] = n;
+        }
+
+        return b;
+
+    }
+
     public static void e1113(){
         int M = 3;
         int N = 2;
@@ -134,6 +153,28 @@ public class Chapter1 {
         return max;
     }
 
+    public static void testLg(){
+        System.out.println("Testing lg() method with N=39");
+        System.out.println(lg(39));
+    }
+
+    public static void testHistogram(){
+        System.out.println("Testing histogram method with M=10");
+        int[] b = histogram(new int[]{1,3,4,6,8,1}, 10);
+        int sum = 0;
+        for (int i = 0; i < b.length ; i++) {
+            sum += b[i];
+        }
+        if ( sum == 6 )
+            System.out.println("OK to proceed for 1.1.15");
+    }
+
+    public static String exR1(int n){
+        if (n<= 0) return "";
+        return exR1(n-3) + n + exR1(n-2) + n;
+
+    }
+
     public static void main(String[] args){
         exercise111();
         exercise112();
@@ -148,6 +189,11 @@ public class Chapter1 {
 
         e1113();
 
-        System.out.println(lg(39));
+        testLg();
+        testHistogram();
+
+        System.out.println("exR1(6)" + exR1(6));
+
+
     }
 }
