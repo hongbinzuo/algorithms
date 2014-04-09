@@ -11,6 +11,10 @@ import java.util.Vector;
 public class PrintTable {
     private static Vector table = new Vector<Score>();
 
+    /**
+     * Read system console input into a vector. Stop when type "exit".
+     * @param in
+     */
     private static void readTable(InputStream in){
         Scanner scanner = new Scanner(in);
 
